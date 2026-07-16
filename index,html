@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Testing Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Automation Testing Hub</h1>
+    <p>Learn • Practice • Automate</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="login.html">Login</a>
+    <a href="register.html">Register</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="tables.html">Tables</a>
+</nav>
+
+<section class="hero">
+    <h2>Welcome to Automation Testing Practice</h2>
+    <p>Practice Selenium, Java, API Testing, SQL and more.</p>
+
+    <button onclick="showMessage()">Start Learning</button>
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>Login Page</h3>
+<p>Practice ID, Name, XPath and CSS Selectors.</p>
+<a href="login.html">Open</a>
+</div>
+
+<div class="card">
+<h3>Registration Form</h3>
+<p>Practice form automation.</p>
+<a href="register.html">Open</a>
+</div>
+
+<div class="card">
+<h3>Web Tables</h3>
+<p>Practice dynamic table automation.</p>
+<a href="tables.html">Open</a>
+</div>
+
+<div class="card">
+<h3>JavaScript Alerts</h3>
+<p>Practice Alert handling.</p>
+<a href="alerts.html">Open</a>
+</div>
+
+</section>
+
+<footer>
+© 2026 Automation Testing Hub
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
