@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Elements Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Dynamic Elements Practice</h1>
+</header>
+
+<div class="login-container">
+
+    <h2>Loading Spinner</h2>
+
+    <button id="loadBtn" class="btn" onclick="showContent()">
+        Load Content
+    </button>
+
+    <p id="loadingMessage" style="display:none;color:blue;">
+        Loading...
+    </p>
+
+    <div id="dynamicContent" style="display:none;">
+        <h3>Content Loaded Successfully!</h3>
+        <p>This content appeared after 3 seconds.</p>
+    </div>
+
+    <hr><br>
+
+    <h2>Hidden Element</h2>
+
+    <button id="showButton" class="btn" onclick="showHiddenField()">
+        Show Hidden Textbox
+    </button>
+
+    <input
+        type="text"
+        id="hiddenTextbox"
+        class="input-field"
+        placeholder="Hidden Textbox"
+        style="display:none;">
+
+    <hr><br>
+
+    <h2>Dynamic ID</h2>
+
+    <button id="generateBtn" class="btn" onclick="generateDynamicId()">
+        Generate Dynamic Button
+    </button>
+
+    <div id="dynamicButtonContainer"></div>
+
+</div>
+
+<script>
+
+function showContent(){
+
+    document.getElementById("loadingMessage").style.display="block";
+
+    setTimeout(function(){
+
+        document.getElementById("loadingMessage").style.display="none";
+
+        document.getElementById("dynamicContent").style.display="block";
+
+    },3000);
+
+}
+
+function showHiddenField(){
+
+    document.getElementById("hiddenTextbox").style.display="block";
+
+}
+
+function generateDynamicId(){
+
+    var randomId="btn"+Math.floor(Math.random()*10000);
+
+    document.getElementById("dynamicButtonContainer").innerHTML=
+    "<button id='"+randomId+"' class='btn'>Dynamic Button</button>";
+
+}
+
+</script>
+
+</body>
+</html>
