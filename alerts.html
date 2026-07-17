@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>JavaScript Alerts Practice</h1>
+</header>
+
+<div class="login-container">
+
+    <h2>Alert Box</h2>
+    <button class="btn" id="alertBtn" onclick="showAlert()">
+        Show Alert
+    </button>
+
+    <br><br>
+
+    <h2>Confirmation Box</h2>
+    <button class="btn" id="confirmBtn" onclick="showConfirm()">
+        Show Confirmation
+    </button>
+
+    <p id="confirmResult"></p>
+
+    <br>
+
+    <h2>Prompt Box</h2>
+    <button class="btn" id="promptBtn" onclick="showPrompt()">
+        Show Prompt
+    </button>
+
+    <p id="promptResult"></p>
+
+</div>
+
+<script>
+
+function showAlert(){
+    alert("Welcome to Automation Testing Hub!");
+}
+
+function showConfirm(){
+
+    var result = confirm("Do you want to continue?");
+
+    if(result){
+        document.getElementById("confirmResult").innerHTML =
+        "You clicked OK";
+    }
+    else{
+        document.getElementById("confirmResult").innerHTML =
+        "You clicked Cancel";
+    }
+
+}
+
+function showPrompt(){
+
+    var name = prompt("Enter your name");
+
+    if(name != null && name != ""){
+        document.getElementById("promptResult").innerHTML =
+        "Welcome " + name;
+    }
+    else{
+        document.getElementById("promptResult").innerHTML =
+        "No value entered";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
