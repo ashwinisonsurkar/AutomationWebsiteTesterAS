@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Login Practice</h1>
+</header>
+
+<div class="login-container">
+
+    <form id="loginForm">
+
+        <label for="username">Username</label>
+        <input
+            type="text"
+            id="username"
+            name="username"
+            class="input-field"
+            placeholder="Enter Username">
+
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            class="input-field"
+            placeholder="Enter Password">
+
+        <button
+            type="button"
+            id="loginBtn"
+            class="btn"
+            onclick="validateLogin()">
+            Login
+        </button>
+
+        <p id="message"></p>
+
+    </form>
+
+</div>
+
+<script>
+function validateLogin(){
+
+    var username=document.getElementById("username").value;
+    var password=document.getElementById("password").value;
+
+    if(username=="admin" && password=="admin123"){
+        document.getElementById("message").innerHTML="Login Successful";
+        document.getElementById("message").style.color="green";
+    }
+    else{
+        document.getElementById("message").innerHTML="Invalid Username or Password";
+        document.getElementById("message").style.color="red";
+    }
+
+}
+</script>
+
+</body>
+</html>
