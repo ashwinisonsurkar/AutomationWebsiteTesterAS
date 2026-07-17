@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Dropdown Practice</h1>
+</header>
+
+<div class="login-container">
+
+<h2>Select Country</h2>
+
+<label>Country</label>
+
+<select id="country" class="input-field" onchange="loadStates()">
+
+<option value="">Select Country</option>
+<option value="India">India</option>
+<option value="USA">USA</option>
+<option value="UK">UK</option>
+
+</select>
+
+<label>State</label>
+
+<select id="state" class="input-field">
+
+<option>Select State</option>
+
+</select>
+
+<label>City</label>
+
+<select id="city" class="input-field">
+
+<option>Mumbai</option>
+<option>Pune</option>
+<option>Nagpur</option>
+
+</select>
+
+<br><br>
+
+<label>Favorite Automation Tool</label>
+
+<select id="tool" class="input-field">
+
+<option>Selenium</option>
+<option>Playwright</option>
+<option>Cypress</option>
+<option>Appium</option>
+
+</select>
+
+<br><br>
+
+<label>Experience Level</label>
+
+<select id="experience" class="input-field">
+
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+
+</select>
+
+<br><br>
+
+<button
+class="btn"
+id="submitBtn"
+onclick="showSelection()">
+Submit
+</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function loadStates(){
+
+var country=document.getElementById("country").value;
+
+var state=document.getElementById("state");
+
+state.innerHTML="";
+
+if(country=="India"){
+
+state.innerHTML=
+"<option>Maharashtra</option><option>Karnataka</option><option>Gujarat</option>";
+
+}
+
+else if(country=="USA"){
+
+state.innerHTML=
+"<option>California</option><option>Texas</option><option>Florida</option>";
+
+}
+
+else if(country=="UK"){
+
+state.innerHTML=
+"<option>England</option><option>Scotland</option><option>Wales</option>";
+
+}
+
+}
+
+function showSelection(){
+
+var country=document.getElementById("country").value;
+
+var tool=document.getElementById("tool").value;
+
+document.getElementById("result").innerHTML=
+
+"Country : "+country+"<br>Automation Tool : "+tool;
+
+}
+
+</script>
+
+</body>
+
+</html>
