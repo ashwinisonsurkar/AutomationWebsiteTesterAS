@@ -264,3 +264,97 @@ hr{
 }
 
 }
+
+
+
+/* Dropdown Page */
+
+.login-container{
+    width:500px;
+    margin:40px auto;
+    background:#ffffff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+
+.login-container h2{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:8px;
+}
+
+.input-field{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+select{
+    background:#fff;
+    cursor:pointer;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:#1565c0;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0d47a1;
+}
+
+#result{
+    margin-top:20px;
+    padding:12px;
+    background:#f5f5f5;
+    border-left:5px solid #1565c0;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+@media(max-width:600px){
+
+.login-container{
+    width:90%;
+    padding:20px;
+}
+
+.input-field,
+.btn{
+    font-size:15px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
